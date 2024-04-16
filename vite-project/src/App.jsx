@@ -1,4 +1,4 @@
-import Chai from "./Chai"
+import Chai from "./chai"
 
 function App() {
 
