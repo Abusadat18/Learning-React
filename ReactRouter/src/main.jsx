@@ -7,7 +7,7 @@ import Home from './Home/Home.jsx'
 import About from "./About/About.jsx"
 import Contact from './Contact/Contact.jsx'
 import User from './User/User.jsx'
-import Github from './Github/Github.jsx'
+import Github, { githubDataLoader } from './Github/Github.jsx'
 
 /* const router = createBrowserRouter([
   {
@@ -37,7 +37,10 @@ const router = createBrowserRouter(
       <Route path="about" element={<About/>}/>
       <Route path="contact" element={<Contact/>}/>
       <Route path="user/:userid" element={<User/>}/>
-      <Route path="github" element={<Github/>}/>
+      <Route
+        loader={githubDataLoader} 
+        path="github" 
+        element={<Github/>}/>
     </Route>
   )
 )
